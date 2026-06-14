@@ -198,9 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'elegant-womens-watch',
       name: "Elegant Women's Watch",
       image: [
-        'https://images.unsplash.com/photo-1616804616235-cb233dce8e00?q=80&w=1000&auto=format&fit=crop',
-        'https://img.freepik.com/premium-photo/isolate-woman-wristwatch_63097-2001.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
-        'https://img.freepik.com/premium-photo/girl-jacket-with-clock-wrist-watch-her-hand_722501-185.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+        'https://in.pinterest.com/pin/977351556646223053/'
       ],
       price: '$199.99',
       description: "A delicate and refined timepiece designed for the modern woman. Features a rose-gold plated bezel, mother-of-pearl dial, and a slender mesh bracelet."
@@ -231,9 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fashionable-watch',
       name: 'Fashionable Watch',
       image: [
-        'https://images.unsplash.com/photo-1508656961664-92931a2c3a50?q=80&w=1000&auto=format&fit=crop',
-        'https://img.freepik.com/premium-photo/stylish-man-gray-jumper-elegant-business-man-s-hand-with-fas_723234-2578.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
-        'https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+        'https://in.pinterest.com/pin/741194051218575998/'
       ],
       price: '$399.99',
       description: "A trendy, minimalist watch that pairs perfectly with any outfit. Features an ultra-thin dial profile and interchangeable straps for maximum versatility."
@@ -251,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'womens-diamond-watch',
       name: "Women's Diamond Edition",
       image: [
-        'https://img.freepik.com/premium-photo/beautiful-watch-with-diamond-it-is-lying-wooden-table_960396-85750.jpg'
+        'https://in.pinterest.com/pin/1148488342508721879/'
       ],
       price: '$899.99',
       description: "An exquisite statement piece. This limited edition watch features real diamond hour markers, a rose gold case, and a stunning mother-of-pearl dial."
@@ -260,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'rugged-smartwatch',
       name: 'Rugged Smartwatch',
       image: [
-        'https://images.unsplash.com/photo-1508057198894-247b23fe5278?q=80&w=1000&auto=format&fit=crop'
+        'https://in.pinterest.com/pin/1078260335838203375/'
       ],
       price: '$249.99',
       description: "Built for the great outdoors. This smartwatch offers GPS tracking, altimeter, barometer, and a durable shock-proof casing."
@@ -287,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'minimalist-black-watch',
       name: 'Minimalist Black Watch',
       image: [
-        'https://images.unsplash.com/photo-1508656961664-92931a2c3a50?q=80&w=1000&auto=format&fit=crop'
+        'https://images.unsplash.com/photo-1508656961664-https://in.pinterest.com/pin/436919601366661163/92931a2c3a50?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$129.99',
       description: "Sleek, stealthy, and sophisticated. A minimalist all-black design perfect for modern urban wear."
@@ -296,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fitness-tracker-watch',
       name: 'Fitness Tracker Watch',
       image: [
-        'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b0?q=80&w=1000&auto=format&fit=crop'
+        'https://in.pinterest.com/pin/179369997655955953/'
       ],
       price: '$89.99',
       description: "Keep track of your health goals with this vibrant green fitness tracker featuring continuous heart-rate monitoring."
@@ -326,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const nav = document.createElement('div');
       nav.classList.add('carousel-nav');
-      
+
       const prevBtn = document.createElement('button');
       prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
       prevBtn.setAttribute('aria-label', 'Previous image');
@@ -370,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Product info
       const info = document.createElement('div');
       info.classList.add('product-info');
-      
+
       const title = document.createElement('h3');
       const titleLink = document.createElement('a');
       titleLink.href = `product.html?id=${product.id}`;
@@ -378,11 +374,11 @@ document.addEventListener('DOMContentLoaded', () => {
       titleLink.style.color = 'inherit';
       titleLink.style.textDecoration = 'none';
       title.appendChild(titleLink);
-      
+
       const stars = document.createElement('div');
       stars.classList.add('star-rating');
       stars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>';
-      
+
       const price = document.createElement('p');
       price.classList.add('price');
       price.textContent = product.price;
@@ -404,20 +400,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.toLowerCase().includes('product.html')) {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    
+
     if (window.productsData && window.productsData.length > 0) {
       // Find product by ID or default to the first product if not found
       let product = window.productsData.find(p => p.id === productId);
       if (!product) {
         product = window.productsData[0];
       }
-      
+
       // Update DOM elements
       const titleEl = document.getElementById('product-title');
       const priceEl = document.getElementById('product-price');
       const descEl = document.getElementById('product-short-desc');
       const imgEl = document.getElementById('product-image');
-      
+
       if (titleEl) titleEl.textContent = product.name;
       if (priceEl) priceEl.textContent = product.price;
       if (descEl) descEl.textContent = product.description;
@@ -425,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imgEl.src = product.image[0];
         imgEl.alt = product.name;
       }
-      
+
       // Update page title
       document.title = `${product.name} | TimelyCraft`;
     }
