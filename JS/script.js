@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'classic-mens-watch',
       name: "Classic Men's Watch",
       image: [
-        'https://img.freepik.com/premium-photo/gorgeous-luxury-wrist-watch-background_1262174-662.jpg?w=740',
+        'https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1000&auto=format&fit=crop',
         'https://img.freepik.com/free-photo/rehearsal-preparation-groom-s-watch-hand_8353-5810.jpg?w=996',
         'https://img.freepik.com/free-photo/watch-black-box-bow-tie-lie-white-windowsill_8353-687.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
       ],
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'elegant-womens-watch',
       name: "Elegant Women's Watch",
       image: [
-        'https://img.freepik.com/free-photo/close-up-seller-s-hand-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20420.jpg?w=996',
+        'https://images.unsplash.com/photo-1616804616235-cb233dce8e00?q=80&w=1000&auto=format&fit=crop',
         'https://img.freepik.com/premium-photo/isolate-woman-wristwatch_63097-2001.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
         'https://img.freepik.com/premium-photo/girl-jacket-with-clock-wrist-watch-her-hand_722501-185.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
       ],
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'smartwatch-pro',
       name: 'SmartWatch Pro',
       image: [
-        'https://img.freepik.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=1000&auto=format&fit=crop',
         'https://img.freepik.com/free-vector/realistic-fitness-trackers_23-2148530530.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
         'https://img.freepik.com/free-vector/realistic-fitness-tracker-bracelet-illustration-collection_23-2148555261.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
       ],
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'luxury-watch',
       name: 'Luxury Watch',
       image: [
-        'https://img.freepik.com/free-photo/elegant-watch-with-silver-golden-chain-isolated_181624-27080.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1000&auto=format&fit=crop',
         'https://img.freepik.com/free-photo/close-up-seller-s-hands-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20850.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
         'https://img.freepik.com/premium-photo/close-up-illuminated-clock_1048944-30735414.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
       ],
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fashionable-watch',
       name: 'Fashionable Watch',
       image: [
-        'https://img.freepik.com/free-photo/close-up-woman-listening-music_23-2148574823.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://images.unsplash.com/photo-1508656961664-92931a2c3a50?q=80&w=1000&auto=format&fit=crop',
         'https://img.freepik.com/premium-photo/stylish-man-gray-jumper-elegant-business-man-s-hand-with-fas_723234-2578.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
         'https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
       ],
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'mens-diver-watch',
       name: "Men's Diver Pro",
       image: [
-        'https://img.freepik.com/free-photo/macro-shot-silver-watch_23-2150393046.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+        'https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$549.99',
       description: "A rugged, high-performance diver's watch built for the extremes. Features a unidirectional rotating bezel, luminous hands, and 200m water resistance."
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'rugged-smartwatch',
       name: 'Rugged Smartwatch',
       image: [
-        'https://img.freepik.com/free-photo/smart-watch-with-digital-screen-wooden-table-with-blurred-background_1142-37841.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+        'https://images.unsplash.com/photo-1508057198894-247b23fe5278?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$249.99',
       description: "Built for the great outdoors. This smartwatch offers GPS tracking, altimeter, barometer, and a durable shock-proof casing."
