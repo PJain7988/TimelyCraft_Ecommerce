@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'mens-diver-watch',
       name: "Men's Diver Pro",
       image: [
-        'https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop'
+        'https://img.freepik.com/premium-photo/high-quality-wallpaper-background-hd_208329323.jpg'
       ],
       price: '$549.99',
       description: "A rugged, high-performance diver's watch built for the extremes. Features a unidirectional rotating bezel, luminous hands, and 200m water resistance."
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'womens-diamond-watch',
       name: "Women's Diamond Edition",
       image: [
-        'https://img.freepik.com/premium-photo/beautiful-watch-with-diamond-it-is-lying-wooden-table_960396-85750.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+        'https://img.freepik.com/premium-photo/antony-trivet-photography_135951827.jpg'
       ],
       price: '$899.99',
       description: "An exquisite statement piece. This limited edition watch features real diamond hour markers, a rose gold case, and a stunning mother-of-pearl dial."
@@ -260,10 +260,46 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'rugged-smartwatch',
       name: 'Rugged Smartwatch',
       image: [
-        'https://images.unsplash.com/photo-1508057198894-247b23fe5278?q=80&w=1000&auto=format&fit=crop'
+        'https://img.freepik.com/premium-photo/high-resolution-black-rugged-smartwatch-product-shot_426214058.jpg'
       ],
       price: '$249.99',
       description: "Built for the great outdoors. This smartwatch offers GPS tracking, altimeter, barometer, and a durable shock-proof casing."
+    },
+    {
+      id: 'rose-gold-chronograph',
+      name: 'Rose Gold Chronograph',
+      image: [
+        'https://img.freepik.com/free-photo/elegant-watch-with-silver-golden-chain-lights-isolated_12751186.jpg'
+      ],
+      price: '$349.99',
+      description: "A stunning rose gold chronograph watch with multiple dials, precise timekeeping, and a brilliant dual-tone chain."
+    },
+    {
+      id: 'automatic-skeleton-watch',
+      name: 'Automatic Skeleton Watch',
+      image: [
+        'https://img.freepik.com/free-photo/futuristic-time-machine_225952665.jpg'
+      ],
+      price: '$699.99',
+      description: "Experience the heartbeat of time. This automatic skeleton watch reveals its intricate inner workings and gears."
+    },
+    {
+      id: 'minimalist-black-watch',
+      name: 'Minimalist Black Watch',
+      image: [
+        'https://img.freepik.com/free-photo/beautiful-rendering-steel-object_396957456.jpg'
+      ],
+      price: '$129.99',
+      description: "Sleek, stealthy, and sophisticated. A minimalist all-black design perfect for modern urban wear."
+    },
+    {
+      id: 'fitness-tracker-watch',
+      name: 'Fitness Tracker Watch',
+      image: [
+        'https://img.freepik.com/premium-vector/green-fitness-tracker-heart-rate-smart-watch-healthy-lifestyle-technology_369192118.jpg'
+      ],
+      price: '$89.99',
+      description: "Keep track of your health goals with this vibrant green fitness tracker featuring continuous heart-rate monitoring."
     }
   ];
 
