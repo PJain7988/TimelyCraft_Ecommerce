@@ -40,28 +40,38 @@
     <div class="container">
       <h1>Your Wishlist</h1>
 
-      <div class="wishlist-items">
-        <div class="wishlist-card">
-          <img src="https://img.freepik.com/premium-photo/elegant-watch-mockup-template_1054941-8374.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Elegant Silver Watch">
-          <div class="card-details">
-            <h3>Elegant Silver Watch</h3>
-            <p>$199.00</p>
-            <div class="card-actions">
-              <button class="btn">Add to Cart</button>
-              <button class="btn remove-btn">Remove</button>
+      <div class="products-flex">
+        <!-- Wishlist Item 1 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://img.freepik.com/premium-photo/elegant-watch-mockup-template_1054941-8374.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Elegant Silver Watch">
+            <div class="product-actions">
+              <button class="action-btn" aria-label="Remove from Wishlist" style="color: #dc3545;" onclick="this.closest('.product-card').remove(); alert('Removed from Wishlist')"><i class="fas fa-trash-alt"></i></button>
+              <a href="product.html" class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></a>
+              <button class="action-btn" aria-label="Add to Cart" onclick="alert('Added to Cart')"><i class="fas fa-cart-plus"></i></button>
             </div>
+          </div>
+          <div class="product-info">
+            <h3>Elegant Silver Watch</h3>
+            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p class="price">$199.00</p>
           </div>
         </div>
 
-        <div class="wishlist-card">
-          <img src="https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Classic Leather Watch">
-          <div class="card-details">
-            <h3>Classic Leather Watch</h3>
-            <p>$149.00</p>
-            <div class="card-actions">
-              <button class="btn">Add to Cart</button>
-              <button class="btn remove-btn">Remove</button>
+        <!-- Wishlist Item 2 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Classic Leather Watch">
+            <div class="product-actions">
+              <button class="action-btn" aria-label="Remove from Wishlist" style="color: #dc3545;" onclick="this.closest('.product-card').remove(); alert('Removed from Wishlist')"><i class="fas fa-trash-alt"></i></button>
+              <a href="product.html" class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></a>
+              <button class="action-btn" aria-label="Add to Cart" onclick="alert('Added to Cart')"><i class="fas fa-cart-plus"></i></button>
             </div>
+          </div>
+          <div class="product-info">
+            <h3>Classic Leather Watch</h3>
+            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+            <p class="price">$149.00</p>
           </div>
         </div>
       </div>

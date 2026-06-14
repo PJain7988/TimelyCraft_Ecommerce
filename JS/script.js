@@ -233,7 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (carousel) {
     bestSellers.forEach((product) => {
       const item = document.createElement('div');
-      item.classList.add('carousel-item');
+      item.classList.add('carousel-item', 'product-card'); // Use product-card styles
+
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('product-img-wrapper');
 
       const imageContainer = document.createElement('div');
       imageContainer.classList.add('carousel-images');
@@ -250,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const nav = document.createElement('div');
       nav.classList.add('carousel-nav');
-
+      
       const prevBtn = document.createElement('button');
       prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
       prevBtn.setAttribute('aria-label', 'Previous image');
@@ -269,36 +272,49 @@ document.addEventListener('DOMContentLoaded', () => {
         imgs[currentIndex].classList.add('active');
       };
 
-      prevBtn.addEventListener('click', () => updateImage(currentIndex - 1));
-      nextBtn.addEventListener('click', () => updateImage(currentIndex + 1));
+      prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); updateImage(currentIndex - 1); });
+      nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); updateImage(currentIndex + 1); });
 
-      // Auto-play carousel with pause on hover
       let autoPlay = setInterval(() => updateImage(currentIndex + 1), 3000);
       item.addEventListener('mouseenter', () => clearInterval(autoPlay));
       item.addEventListener('mouseleave', () => {
         autoPlay = setInterval(() => updateImage(currentIndex + 1), 3000);
       });
 
-      item.appendChild(imageContainer);
-      item.appendChild(nav);
+      // Actions overlay
+      const actions = document.createElement('div');
+      actions.classList.add('product-actions');
+      actions.innerHTML = `
+        <button class="action-btn" aria-label="Add to Wishlist" onclick="alert('Added to Wishlist')"><i class="far fa-heart"></i></button>
+        <a href="product.html" class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></a>
+        <button class="action-btn" aria-label="Add to Cart" onclick="alert('Added to Cart')"><i class="fas fa-cart-plus"></i></button>
+      `;
 
+      wrapper.appendChild(imageContainer);
+      wrapper.appendChild(nav);
+      wrapper.appendChild(actions);
+
+      // Product info
+      const info = document.createElement('div');
+      info.classList.add('product-info');
+      
       const title = document.createElement('h3');
       title.textContent = product.name;
-
+      
+      const stars = document.createElement('div');
+      stars.classList.add('star-rating');
+      stars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>';
+      
       const price = document.createElement('p');
+      price.classList.add('price');
       price.textContent = product.price;
 
-      const buyButton = document.createElement('button');
-      buyButton.textContent = 'Buy Now';
-      buyButton.classList.add('buy-now-btn');
+      info.appendChild(title);
+      info.appendChild(stars);
+      info.appendChild(price);
 
-      buyButton.addEventListener('click', () => {
-        alert(`Thank you for purchasing: ${product.name} at ${product.price}`);
-      });
-
-      item.appendChild(title);
-      item.appendChild(price);
-      item.appendChild(buyButton);
+      item.appendChild(wrapper);
+      item.appendChild(info);
 
       carousel.appendChild(item);
     });
