@@ -3,117 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | TimelyCraft</title>
+  <meta name="description" content="Explore curated watch collections at TimelyCraft. Men's, Women's, Smartwatch, Classic and Limited Edition collections.">
+  <meta property="og:title" content="Collections | TimelyCraft">
+  <meta property="og:description" content="Browse our curated timepiece collections for every style.">
+  <title>Collections | TimelyCraft</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-  <section class="collections-hero">
-    <h1>Explore Our Collections</h1>
-    <p>Curated timepieces for every style. Browse our featured collections below.</p>
-  </section>
-
-  <section class="collection-grid">
-    <div class="collection-card">
-      <img src="https://img.freepik.com/free-vector/watch-set-expensive-classic-clock-with-leather-metal-straps-illustration_1284-51537.jpg" alt="Men's Collection">
-      <h3>Men's Collection</h3>
-      <p>Bold, timeless designs crafted for confidence and performance.</p>
-      <a href="shop.html?cat=mens" class="cta-button">View Collection</a>
-    </div>
-
-    <div class="collection-card">
-      <img src="https://img.freepik.com/free-photo/flat-lay-coffee-keyboard-decoration_23-2148604907.jpg" alt="Women's Collection">
-      <h3>Women's Collection</h3>
-      <p>Elegant and refined watches for modern women.</p>
-      <a href="shop.html?cat=womens" class="cta-button">View Collection</a>
-    </div>
-
-    <div class="collection-card">
-      <img src="https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309652.jpg" alt="Smartwatch Collection">
-      <h3>Smartwatch Collection</h3>
-      <p>Smart meets stylish—technology blended with sophistication.</p>
-      <a href="shop.html?cat=smart" class="cta-button">View Collection</a>
-    </div>
-
-    <div class="collection-card">
-      <img src="https://img.freepik.com/premium-photo/directly-view-wristwatches-table_1048944-1362279.jpg" alt="Classic Collection">
-      <h3>Classic Collection</h3>
-      <p>Minimalist and traditional designs that never go out of style.</p>
-      <a href="shop.html?cat=classic" class="cta-button">View Collection</a>
-    </div>
-
-    <div class="collection-card">
-      <img src="https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg" alt="Limited Editions">
-      <h3>Limited Editions</h3>
-      <p>Rare finds crafted with exclusivity and prestige in mind.</p>
-      <a href="shop.html?cat=limited" class="cta-button">View Collection</a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html" class="active">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+  <main>
+    <section class="collections-hero">
+      <h1>Explore Our Collections</h1>
+      <p>Curated timepieces for every style. Browse our featured collections below.</p>
+    </section>
+
+    <section class="collection-grid reveal">
+      <div class="collection-card">
+        <img src="https://img.freepik.com/free-vector/watch-set-expensive-classic-clock-with-leather-metal-straps-illustration_1284-51537.jpg" alt="Men's Collection">
+        <h3>Men's Collection</h3>
+        <p>Bold, timeless designs crafted for confidence and performance.</p>
+        <a href="shop.html?cat=mens" class="cta-button"><span>View Collection</span></a>
+      </div>
+
+      <div class="collection-card">
+        <img src="https://img.freepik.com/free-photo/flat-lay-coffee-keyboard-decoration_23-2148604907.jpg" alt="Women's Collection">
+        <h3>Women's Collection</h3>
+        <p>Elegant and refined watches for modern women.</p>
+        <a href="shop.html?cat=womens" class="cta-button"><span>View Collection</span></a>
+      </div>
+
+      <div class="collection-card">
+        <img src="https://img.freepik.com/free-photo/modern-stationary-collection-arrangement_23-2149309652.jpg" alt="Smartwatch Collection">
+        <h3>Smartwatch Collection</h3>
+        <p>Smart meets stylish—technology blended with sophistication.</p>
+        <a href="shop.html?cat=smart" class="cta-button"><span>View Collection</span></a>
+      </div>
+
+      <div class="collection-card">
+        <img src="https://img.freepik.com/premium-photo/directly-view-wristwatches-table_1048944-1362279.jpg" alt="Classic Collection">
+        <h3>Classic Collection</h3>
+        <p>Minimalist and traditional designs that never go out of style.</p>
+        <a href="shop.html?cat=classic" class="cta-button"><span>View Collection</span></a>
+      </div>
+
+      <div class="collection-card">
+        <img src="https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg" alt="Limited Editions">
+        <h3>Limited Editions</h3>
+        <p>Rare finds crafted with exclusivity and prestige in mind.</p>
+        <a href="shop.html?cat=limited" class="cta-button"><span>View Collection</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>

@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | TimelyCraft</title>
-    <link rel="stylesheet" href="CSS/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read the latest watch news, maintenance tips, and expert guides on the TimelyCraft Blog.">
+  <meta property="og:title" content="Blog | TimelyCraft">
+  <meta property="og:description" content="Watch news, maintenance tips, and expert guides from TimelyCraft.">
+  <title>Blog | TimelyCraft</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-    <section class="blog1-listing">
-        <h1>Our Blog</h1>
-        <div class="blog-grid">
-            <article>
-                <a href="blog-single.html">
-                    <img src="https://img.freepik.com/free-vector/watch-male-female-kid-set-3d-realistic-vector_529539-281.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Top 10 Watches for 2025"/>
-                    <h3>Top 10 Watches for 2025</h3>
-                    <p>Discover the top watch trends for the upcoming year.</p>
-                </a>
-            </article>
-            <article>
-                <a href="blog-single.html">
-                    <img src="https://img.freepik.com/free-photo/close-up-clock-with-time-change_23-2149241148.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="How to Maintain a Watch"/>
-                    <h3>How to Maintain a Watch</h3>
-                    <p>Learn essential tips to keep your timepiece running smoothly and lasting longer.</p>
-                </a>
-            </article>
-            <article>
-                <a href="blog-single.html">
-                    <img src="https://img.freepik.com/premium-psd/watch-accessories-isolated-transparent-background_1178600-16516.jpg?w=996" alt="Automatic vs Quartz"/>
-                    <h3>Automatic vs Quartz: What's Right?</h3>
-                    <p>Understand the key differences between automatic and quartz watches to make the right choice.</p>
-                </a>
-            </article>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+  <main>
+    <section class="blog1-listing reveal">
+      <h1>Our Blog</h1>
+      <div class="blog-grid">
+        <article>
+          <a href="blog-single.html">
+            <img src="https://img.freepik.com/free-vector/watch-male-female-kid-set-3d-realistic-vector_529539-281.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Top 10 Watches for 2025">
+            <h3>Top 10 Watches for 2025</h3>
+            <p>Discover the top watch trends for the upcoming year.</p>
+            <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+          </a>
+        </article>
+        <article>
+          <a href="blog-single.html">
+            <img src="https://img.freepik.com/free-photo/close-up-clock-with-time-change_23-2149241148.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="How to Maintain a Watch">
+            <h3>How to Maintain a Watch</h3>
+            <p>Learn essential tips to keep your timepiece running smoothly and lasting longer.</p>
+            <span class="read-time"><i class="far fa-clock"></i> 4 min read</span>
+          </a>
+        </article>
+        <article>
+          <a href="blog-single.html">
+            <img src="https://img.freepik.com/premium-psd/watch-accessories-isolated-transparent-background_1178600-16516.jpg?w=996" alt="Automatic vs Quartz">
+            <h3>Automatic vs Quartz: What's Right?</h3>
+            <p>Understand the key differences between automatic and quartz watches to make the right choice.</p>
+            <span class="read-time"><i class="far fa-clock"></i> 6 min read</span>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>

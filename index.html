@@ -15,138 +15,238 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Navigation -->
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
 
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-
-
-    <section class="hero">
-        <div class="hero-content">
-            <a href="collections.html" class="cta-button">Shop Now</a>
-        </div>
-    </section>
-
-    <section class="category-section">
-  <h2>Shop by Category</h2>
-  <div class="category-links">
-    <a href="shop.html?category=mens">Men's Watches</a>
-    <a href="shop.html?category=womens">Women's Watches</a>
-    <a href="shop.html?category=smart">Smart Watches</a>
-    <a href="shop.html?category=classic">Classic</a>
-    <a href="shop.html?category=limited">Limited Edition</a>
-  </div>
-</section>
-
-
-    <section class="best-sellers">
-        <h2>Best Sellers</h2>
-        <div id="bestSellersCarousel" class="product-carousel"></div>
-    </section>
-<section class="why-choose-us">
-  <h2>Why Choose us</h2>
-  <div class="features">
-    <div class="feature-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/726/726476.png" alt="Free Shipping">
-      <h4>Free Shipping<br>Worldwide</h4>
-    </div>
-    <div class="feature-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Warranty">
-      <h4>2-Year Warranty</h4>
-    </div>
-    <div class="feature-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/483/483356.png" alt="24/7 Support">
-      <h4>24/7 Support</h4>
-    </div>
-    <div class="feature-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Secure Checkout">
-      <h4>100% Secure<br>Checkout</h4>
-    </div>
-  </div>
-</section>
-
-<section class="blog-section">
-  <h2 class="blog-title">Latest from Our Blog</h2>
-  <div class="blog-cards">
-    <div class="blog-card">
-    <img src="https://img.freepik.com/free-vector/watch-male-female-kid-set-3d-realistic-vector_529539-281.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Top Watches 2025">
-      <p class="blog-caption">Top 10 Watches for 2025</p>
-    </div>
-    <div class="blog-card">
-    <img src="https://img.freepik.com/free-photo/close-up-clock-with-time-change_23-2149241148.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="How to Maintain a Watch">
-      <p class="blog-caption">How to Maintain a Watch</p>
-    </div>
-    <div class="blog-card">
-    <img src="https://img.freepik.com/premium-psd/watch-accessories-isolated-transparent-background_1178600-16516.jpg?w=996" alt="Automatic vs Quartz">
-      <p class="blog-caption">Automatic vs Quartz: What's Right?</p>
-    </div>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link">
+          <i class="fa-solid fa-heart"></i>
+          <span>Wishlist</span>
+        </a>
+        <a href="cart.html" class="icon-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+        </a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">New Collection 2025</span>
+      <h1>Precision in Every <span>Tick</span></h1>
+      <p>Discover handcrafted timepieces that blend timeless elegance with modern innovation.</p>
+      <a href="collections.html" class="cta-button"><span>Shop Now</span></a>
+    </div>
+  </section>
+
+  <!-- Category Section -->
+  <section class="category-section reveal">
+    <h2>Shop by Category</h2>
+    <div class="category-links">
+      <a href="shop.html?category=mens"><i class="fas fa-user-tie"></i> Men's Watches</a>
+      <a href="shop.html?category=womens"><i class="fas fa-gem"></i> Women's Watches</a>
+      <a href="shop.html?category=smart"><i class="fas fa-microchip"></i> Smart Watches</a>
+      <a href="shop.html?category=classic"><i class="fas fa-clock"></i> Classic</a>
+      <a href="shop.html?category=limited"><i class="fas fa-crown"></i> Limited Edition</a>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="best-sellers reveal">
+    <h2>Best Sellers</h2>
+    <div id="bestSellersCarousel" class="product-carousel"></div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us reveal">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="feature-item">
+        <i class="fas fa-shipping-fast feature-icon"></i>
+        <h4>Free Shipping<br>Worldwide</h4>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-shield-alt feature-icon"></i>
+        <h4>2-Year Warranty</h4>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-headset feature-icon"></i>
+        <h4>24/7 Support</h4>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-lock feature-icon"></i>
+        <h4>100% Secure<br>Checkout</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="stats-section reveal">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-count="10000" data-suffix="+">0</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="500" data-suffix="+">0</div>
+        <div class="stat-label">Watch Models</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="50" data-suffix="+">0</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="15" data-suffix="">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials reveal">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The craftsmanship is outstanding. My Classic Men's Watch has become my everyday essential. Absolutely love the quality and attention to detail."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">JD</div>
+          <div class="testimonial-author-info">
+            <h4>James Davidson</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Bought the SmartWatch Pro as a gift for my husband. He hasn't taken it off since! The blend of technology and style is perfect."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">SK</div>
+          <div class="testimonial-author-info">
+            <h4>Sarah Kim</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="testimonial-text">"Free worldwide shipping and a 2-year warranty? You can't beat that. The Luxury Watch exceeded all my expectations."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-avatar">MR</div>
+          <div class="testimonial-author-info">
+            <h4>Michael Roberts</h4>
+            <p>Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section reveal">
+    <h2 class="blog-title">Latest from Our Blog</h2>
+    <div class="blog-cards">
+      <div class="blog-card">
+        <img src="https://img.freepik.com/free-vector/watch-male-female-kid-set-3d-realistic-vector_529539-281.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Top Watches 2025">
+        <p class="blog-caption">Top 10 Watches for 2025</p>
+      </div>
+      <div class="blog-card">
+        <img src="https://img.freepik.com/free-photo/close-up-clock-with-time-change_23-2149241148.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="How to Maintain a Watch">
+        <p class="blog-caption">How to Maintain a Watch</p>
+      </div>
+      <div class="blog-card">
+        <img src="https://img.freepik.com/premium-psd/watch-accessories-isolated-transparent-background_1178600-16516.jpg?w=996" alt="Automatic vs Quartz">
+        <p class="blog-caption">Automatic vs Quartz: What's Right?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
+  </footer>
 
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>

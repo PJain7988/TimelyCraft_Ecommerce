@@ -1,4 +1,165 @@
+/* ============================================
+   TimelyCraft — Enhanced Interactions
+   ============================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ==========================================
+  // 1. HAMBURGER MENU TOGGLE
+  // ==========================================
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const navOverlay = document.querySelector('.nav-overlay');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('open');
+      if (navOverlay) navOverlay.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    if (navOverlay) {
+      navOverlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    // Close menu on link click
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+        if (navOverlay) navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ==========================================
+  // 2. SCROLL-TO-TOP BUTTON
+  // ==========================================
+  const scrollTopBtn = document.querySelector('.scroll-top');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ==========================================
+  // 3. STICKY HEADER SCROLL EFFECT
+  // ==========================================
+  const header = document.querySelector('.sticky-header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
+
+  // ==========================================
+  // 4. SCROLL REVEAL ANIMATION
+  // ==========================================
+  const revealElements = document.querySelectorAll('.reveal');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  // ==========================================
+  // 5. ACTIVE NAVIGATION STATE
+  // ==========================================
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-menu li a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
+  // ==========================================
+  // 6. ANIMATED COUNTER (Stats Section)
+  // ==========================================
+  const counters = document.querySelectorAll('.stat-number');
+  if (counters.length > 0) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const finalValue = target.getAttribute('data-count');
+          const suffix = target.getAttribute('data-suffix') || '';
+          const duration = 2000;
+          const startTime = performance.now();
+          const endValue = parseInt(finalValue);
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const currentValue = Math.floor(eased * endValue);
+            target.textContent = currentValue.toLocaleString() + suffix;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+          counterObserver.unobserve(target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  }
+
+  // ==========================================
+  // 7. PRODUCT TABS (Product Detail Page)
+  // ==========================================
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  if (tabButtons.length > 0) {
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        btn.classList.add('active');
+        const target = document.getElementById(tabId);
+        if (target) target.classList.add('active');
+      });
+    });
+  }
+
+  // ==========================================
+  // 8. PAYMENT METHODS (Footer)
+  // ==========================================
   const paymentContainer = document.getElementById('paymentMethods');
   const paymentMethods = [
     { name: 'PayPal', image: 'https://img.freepik.com/premium-photo/3d-render-paypal-logo-extruded-frosted-blue-glass-rotating-slowly-neon-blue-outlines-highlighti_1020495-782220.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740' },
@@ -15,6 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
       paymentContainer.appendChild(img);
     });
   }
+
+  // ==========================================
+  // 9. BEST SELLERS CAROUSEL
+  // ==========================================
   const carousel = document.getElementById('bestSellersCarousel');
 
   const bestSellers = [
@@ -87,9 +252,11 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.add('carousel-nav');
 
       const prevBtn = document.createElement('button');
-      prevBtn.textContent = 'Prev';
+      prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+      prevBtn.setAttribute('aria-label', 'Previous image');
       const nextBtn = document.createElement('button');
-      nextBtn.textContent = 'Next';
+      nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+      nextBtn.setAttribute('aria-label', 'Next image');
       nav.appendChild(prevBtn);
       nav.appendChild(nextBtn);
 
@@ -104,6 +271,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       prevBtn.addEventListener('click', () => updateImage(currentIndex - 1));
       nextBtn.addEventListener('click', () => updateImage(currentIndex + 1));
+
+      // Auto-play carousel with pause on hover
+      let autoPlay = setInterval(() => updateImage(currentIndex + 1), 3000);
+      item.addEventListener('mouseenter', () => clearInterval(autoPlay));
+      item.addEventListener('mouseleave', () => {
+        autoPlay = setInterval(() => updateImage(currentIndex + 1), 3000);
+      });
 
       item.appendChild(imageContainer);
       item.appendChild(nav);
@@ -129,4 +303,5 @@ document.addEventListener('DOMContentLoaded', () => {
       carousel.appendChild(item);
     });
   }
+
 });

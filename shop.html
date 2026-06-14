@@ -3,113 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all premium watches at TimelyCraft. Find men's, women's, smartwatches and limited editions at the best prices.">
+  <meta property="og:title" content="Shop All Watches | TimelyCraft">
+  <meta property="og:description" content="Browse our complete collection of luxury and smart timepieces.">
   <title>Shop | TimelyCraft</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-  <section class="product-listing">
-    <h1>All Products</h1>
-    <div class="products-flex">
-      <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/rehearsal-preparation-groom-s-watch-hand_8353-5810.jpg" alt="Classic Men's Watch">
-        <h3>Classic Men's Watch</h3>
-        <p>$99.99</p>
-        <button class="buy-now">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/close-up-seller-s-hand-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20420.jpg" alt="Elegant Women's Watch">
-        <h3>Elegant Women's Watch</h3>
-        <p>$199.99</p>
-        <button class="buy-now">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://img.freepik.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg" alt="SmartWatch Pro">
-        <h3>SmartWatch Pro</h3>
-        <p>$299.99</p>
-        <button class="buy-now">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://img.freepik.com/premium-photo/close-up-illuminated-clock_1048944-30735414.jpg" alt="Luxury Watch">
-        <h3>Luxury Watch</h3>
-        <p>$499.99</p>
-        <button class="buy-now">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/close-up-woman-listening-music_23-2148574823.jpg" alt="Fashionable Watch">
-        <h3>Fashionable Watch</h3>
-        <p>$399.99</p>
-        <button class="buy-now">Buy Now</button>
-      </div>
-
-    </div>
-  </section>
-</main>
-
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="shop.html">Shop</a></li>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+  <main>
+    <section class="page-hero">
+      <h1>All Products</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / Shop</p>
+    </section>
+
+    <section class="product-listing reveal">
+      <div class="products-flex">
+        <div class="product-card">
+          <img src="https://img.freepik.com/free-photo/rehearsal-preparation-groom-s-watch-hand_8353-5810.jpg" alt="Classic Men's Watch">
+          <h3>Classic Men's Watch</h3>
+          <p>$99.99</p>
+          <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://img.freepik.com/free-photo/close-up-seller-s-hand-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20420.jpg" alt="Elegant Women's Watch">
+          <h3>Elegant Women's Watch</h3>
+          <p>$199.99</p>
+          <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://img.freepik.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg" alt="SmartWatch Pro">
+          <h3>SmartWatch Pro</h3>
+          <p>$299.99</p>
+          <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://img.freepik.com/premium-photo/close-up-illuminated-clock_1048944-30735414.jpg" alt="Luxury Watch">
+          <h3>Luxury Watch</h3>
+          <p>$499.99</p>
+          <button class="buy-now">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://img.freepik.com/free-photo/close-up-woman-listening-music_23-2148574823.jpg" alt="Fashionable Watch">
+          <h3>Fashionable Watch</h3>
+          <p>$399.99</p>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>

@@ -3,91 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with TimelyCraft. Contact us for orders, support, or partnership inquiries.">
+  <meta property="og:title" content="Contact Us | TimelyCraft">
+  <meta property="og:description" content="Reach out to TimelyCraft for customer support, orders, or partnership inquiries.">
   <title>Contact Us | TimelyCraft</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-  <section class="contact-form">
-    <h1>Contact Us</h1>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
+  <main>
+    <section class="contact-section reveal">
+      <h1>Contact Us</h1>
+      <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+      <div class="contact-info-cards">
+        <div class="contact-info-card">
+          <i class="fas fa-phone-alt"></i>
+          <h4>Phone</h4>
+          <p>+1 (800) 123-4567</p>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <p>support@timelycraft.com</p>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Address</h4>
+          <p>123 Watch Street, NY</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form reveal">
+      <h1>Send a Message</h1>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
-      <p class="discount-note">Get 10% off your first order</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>

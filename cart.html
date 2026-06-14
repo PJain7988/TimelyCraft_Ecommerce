@@ -3,151 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your shopping cart at TimelyCraft. Secure checkout with Visa, Mastercard and PayPal.">
+  <meta property="og:title" content="Your Cart | TimelyCraft">
   <title>Your Cart | TimelyCraft</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-  <section class="shopping-cart">
-    <h1>Your Shopping Cart</h1>
-    <table class="cart-table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Total</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody id="cart-items">
-        <tr>
-          <td>Elegant Men's Watch</td>
-          <td><input type="number" value="1" min="1" onchange="updateQuantity(this)"></td>
-          <td>$99.99</td>
-          <td>$99.99</td>
-          <td><button class="remove-btn" onclick="removeCartItem(this)">Remove</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="cart-summary">
-      <p><strong>Subtotal:</strong> <span id="cart-subtotal">$199.99</span></p>
-      <div class="payment-options">
-        <h3>Payment Methods</h3>
-        <div class="payment-logos">
-          <img src="https://cdn.prod.website-files.com/63f6e52346a353ca1752970e/644fb7a623a02d3404b61398_20230501T1259-1c3fc3d6-e028-4828-b7e8-8cc193c573b4.jpeg" alt="Visa">
-          <img src="https://img.freepik.com/premium-vector/debit-card-cartoon-isolated-vector-illustration_77417-2548.jpg" alt="Mastercard">
-          <img src="https://img.freepik.com/premium-photo/3d-render-paypal-logo-extruded-frosted-blue-glass-rotating-slowly-neon-blue-outlines-highlighti_1020495-782220.jpg" alt="PayPal">
-        </div>
-      </div>
-      <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
-    </div>
-  </section>
-</main>
-<script>
-  function updateQuantity(input) {
-    const row = input.closest("tr");
-    const priceText = row.querySelector(".price").textContent.replace("$", "");
-    const price = parseFloat(priceText);
-    const quantity = parseInt(input.value);
-    const totalCell = row.querySelector(".total");
-    const newTotal = (price * quantity).toFixed(2);
-    totalCell.textContent = `$${newTotal}`;
-    updateSubtotal();
-  }
-
-  function removeCartItem(button) {
-    const row = button.closest("tr");
-    row.remove();
-    updateSubtotal();
-  }
-
-  function updateSubtotal() {
-    const totalCells = document.querySelectorAll(".total");
-    let subtotal = 0;
-
-    totalCells.forEach(cell => {
-      const value = parseFloat(cell.textContent.replace("$", ""));
-      subtotal += value;
-    });
-
-    document.getElementById("cart-subtotal").textContent = `$${subtotal.toFixed(2)}`;
-  }
-
-  function proceedToCheckout() {
-    const cartItems = document.querySelectorAll("#cart-items tr");
-    if (cartItems.length === 0) {
-      alert("Your cart is empty.");
-    } else {
-      alert("Proceeding to checkout...");
-    }
-  }
-</script>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link active"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+  <main>
+    <section class="shopping-cart reveal">
+      <h1>Your Shopping Cart</h1>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <tr>
+            <td>Elegant Men's Watch</td>
+            <td><input type="number" value="1" min="1" onchange="updateQuantity(this)"></td>
+            <td class="price-cell">$99.99</td>
+            <td class="total">$99.99</td>
+            <td><button class="remove-btn" onclick="removeCartItem(this)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="coupon-section">
+        <input type="text" placeholder="Enter coupon code">
+        <button>Apply</button>
+      </div>
+
+      <div class="cart-summary">
+        <p><strong>Subtotal:</strong> <span id="cart-subtotal">$99.99</span></p>
+        <div class="payment-options">
+          <h3>Payment Methods</h3>
+          <div class="payment-logos">
+            <img src="https://cdn.prod.website-files.com/63f6e52346a353ca1752970e/644fb7a623a02d3404b61398_20230501T1259-1c3fc3d6-e028-4828-b7e8-8cc193c573b4.jpeg" alt="Visa">
+            <img src="https://img.freepik.com/premium-vector/debit-card-cartoon-isolated-vector-illustration_77417-2548.jpg" alt="Mastercard">
+            <img src="https://img.freepik.com/premium-photo/3d-render-paypal-logo-extruded-frosted-blue-glass-rotating-slowly-neon-blue-outlines-highlighti_1020495-782220.jpg" alt="PayPal">
+          </div>
+        </div>
+        <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function getCartItems() {
+      const rows = document.querySelectorAll("#cart-items tr");
+      const items = [];
+      rows.forEach(row => {
+        const name = row.querySelector("td:first-child").textContent.trim();
+        const price = parseFloat(row.querySelector(".price-cell").textContent.replace("$", ""));
+        const quantity = parseInt(row.querySelector("input[type='number']").value);
+        items.push({ name, price, quantity });
+      });
+      return items;
+    }
+
+    function saveCartToStorage() {
+      const items = getCartItems();
+      localStorage.setItem('timelycraft_cart', JSON.stringify(items));
+    }
+
+    function updateQuantity(input) {
+      const row = input.closest("tr");
+      const priceText = row.querySelector(".price-cell").textContent.replace("$", "");
+      const price = parseFloat(priceText);
+      const quantity = parseInt(input.value);
+      const totalCell = row.querySelector(".total");
+      const newTotal = (price * quantity).toFixed(2);
+      totalCell.textContent = `$${newTotal}`;
+      updateSubtotal();
+      saveCartToStorage();
+    }
+
+    function removeCartItem(button) {
+      const row = button.closest("tr");
+      row.remove();
+      updateSubtotal();
+      saveCartToStorage();
+    }
+
+    function updateSubtotal() {
+      const totalCells = document.querySelectorAll(".total");
+      let subtotal = 0;
+      totalCells.forEach(cell => {
+        const value = parseFloat(cell.textContent.replace("$", ""));
+        subtotal += value;
+      });
+      document.getElementById("cart-subtotal").textContent = `$${subtotal.toFixed(2)}`;
+    }
+
+    function proceedToCheckout() {
+      const cartItems = document.querySelectorAll("#cart-items tr");
+      if (cartItems.length === 0) {
+        alert("Your cart is empty. Please add items before checking out.");
+      } else {
+        saveCartToStorage();
+        window.location.href = "checkout.html";
+      }
+    }
+
+    // Save initial cart state on load
+    document.addEventListener('DOMContentLoaded', () => {
+      saveCartToStorage();
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>

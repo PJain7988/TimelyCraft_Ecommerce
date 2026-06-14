@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete your purchase securely at TimelyCraft. Fast, safe checkout with multiple payment options.">
+  <meta property="og:title" content="Checkout | TimelyCraft">
+  <title>Checkout | TimelyCraft</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html">View Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <main>
+    <!-- Checkout Progress Steps -->
+    <section class="checkout-progress">
+      <div class="container">
+        <div class="progress-steps">
+          <div class="step active" id="step-1">
+            <div class="step-circle"><i class="fas fa-shopping-cart"></i></div>
+            <span>Cart</span>
+          </div>
+          <div class="step-line active"></div>
+          <div class="step active" id="step-2">
+            <div class="step-circle"><i class="fas fa-user"></i></div>
+            <span>Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" id="step-3">
+            <div class="step-circle"><i class="fas fa-credit-card"></i></div>
+            <span>Payment</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step" id="step-4">
+            <div class="step-circle"><i class="fas fa-check"></i></div>
+            <span>Confirm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checkout-section">
+      <div class="container">
+        <div class="checkout-grid">
+
+          <!-- LEFT: Checkout Form -->
+          <div class="checkout-form-area">
+
+            <!-- Step 1: Shipping Details -->
+            <div class="checkout-step-panel active" id="panel-details">
+              <h2><i class="fas fa-truck"></i> Shipping Details</h2>
+              <form id="shipping-form" class="checkout-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="checkout-email">Email Address *</label>
+                  <input type="email" id="checkout-email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                </div>
+                <div class="form-group">
+                  <label for="address">Street Address *</label>
+                  <input type="text" id="address" name="address" placeholder="123 Watch Street" required>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" placeholder="New York" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State *</label>
+                    <input type="text" id="state" name="state" placeholder="NY" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="zip">ZIP Code *</label>
+                    <input type="text" id="zip" name="zip" placeholder="10001" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                      <option value="">Select Country</option>
+                      <option value="US" selected>United States</option>
+                      <option value="UK">United Kingdom</option>
+                      <option value="CA">Canada</option>
+                      <option value="AU">Australia</option>
+                      <option value="DE">Germany</option>
+                      <option value="FR">France</option>
+                      <option value="IN">India</option>
+                      <option value="JP">Japan</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="button" class="checkout-next-btn" onclick="goToPayment()">
+                  Continue to Payment <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+
+            <!-- Step 2: Payment -->
+            <div class="checkout-step-panel" id="panel-payment">
+              <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+
+              <div class="payment-method-selector">
+                <label class="payment-option active" data-method="card">
+                  <input type="radio" name="payment-method" value="card" checked>
+                  <div class="payment-option-content">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Credit / Debit Card</span>
+                  </div>
+                </label>
+                <label class="payment-option" data-method="paypal">
+                  <input type="radio" name="payment-method" value="paypal">
+                  <div class="payment-option-content">
+                    <i class="fab fa-paypal"></i>
+                    <span>PayPal</span>
+                  </div>
+                </label>
+                <label class="payment-option" data-method="cod">
+                  <input type="radio" name="payment-method" value="cod">
+                  <div class="payment-option-content">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Cash on Delivery</span>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Card Form -->
+              <form id="payment-form" class="checkout-form card-form">
+                <div class="form-group">
+                  <label for="card-name">Name on Card *</label>
+                  <input type="text" id="card-name" placeholder="JOHN DOE" required>
+                </div>
+                <div class="form-group">
+                  <label for="card-number">Card Number *</label>
+                  <div class="card-input-wrapper">
+                    <input type="text" id="card-number" placeholder="1234  5678  9012  3456" maxlength="19" required>
+                    <i class="fas fa-lock card-lock-icon"></i>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="card-expiry">Expiry Date *</label>
+                    <input type="text" id="card-expiry" placeholder="MM / YY" maxlength="7" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="card-cvv">CVV *</label>
+                    <div class="card-input-wrapper">
+                      <input type="password" id="card-cvv" placeholder="•••" maxlength="4" required>
+                      <i class="fas fa-question-circle card-lock-icon cvv-help" title="3 or 4 digit code on the back of your card"></i>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <!-- PayPal Message -->
+              <div id="paypal-message" class="alt-payment-msg" style="display:none;">
+                <i class="fab fa-paypal"></i>
+                <p>You will be redirected to PayPal to complete your payment securely.</p>
+              </div>
+
+              <!-- COD Message -->
+              <div id="cod-message" class="alt-payment-msg" style="display:none;">
+                <i class="fas fa-money-bill-wave"></i>
+                <p>Pay with cash when your order is delivered. An additional $5.00 handling fee applies.</p>
+              </div>
+
+              <div class="checkout-nav-buttons">
+                <button type="button" class="checkout-back-btn" onclick="goBackToDetails()">
+                  <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button type="button" class="checkout-next-btn" onclick="placeOrder()">
+                  <i class="fas fa-lock"></i> Place Order
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="checkout-step-panel" id="panel-confirm">
+              <div class="order-success">
+                <div class="success-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p class="order-id">Order ID: <strong id="generated-order-id">#TC-000000</strong></p>
+                <p class="success-message">Thank you for your purchase! A confirmation email has been sent to <strong id="confirm-email">your email</strong>.</p>
+
+                <div class="order-summary-confirm">
+                  <h3>Order Summary</h3>
+                  <div id="confirm-items"></div>
+                  <div class="confirm-total">
+                    <span>Total Paid:</span>
+                    <strong id="confirm-total-amount">$0.00</strong>
+                  </div>
+                </div>
+
+                <div class="success-actions">
+                  <a href="shop.html" class="cta-button"><span>Continue Shopping</span></a>
+                  <a href="index.html" class="checkout-back-btn" style="text-decoration:none; display:inline-flex; text-align:center;">
+                    <i class="fas fa-home"></i> Home
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Order Summary Sidebar -->
+          <div class="checkout-sidebar">
+            <div class="order-summary-card">
+              <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+              <div id="checkout-items-list"></div>
+              <div class="summary-divider"></div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summary-subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span class="free-shipping"><i class="fas fa-check-circle"></i> Free</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax (estimated)</span>
+                <span id="summary-tax">$0.00</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-row summary-total">
+                <span>Total</span>
+                <span id="summary-total">$0.00</span>
+              </div>
+              <div class="secure-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>SSL Secure Checkout</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
+  <script>
+    // ==========================================
+    // CHECKOUT PAGE LOGIC
+    // ==========================================
+
+    // Load cart items from localStorage
+    let cartData = [];
+
+    function loadCartData() {
+      const stored = localStorage.getItem('timelycraft_cart');
+      if (stored) {
+        cartData = JSON.parse(stored);
+      } else {
+        // Fallback: default item if nothing in storage
+        cartData = [
+          { name: "Elegant Men's Watch", price: 99.99, quantity: 1 }
+        ];
+      }
+      renderSummary();
+    }
+
+    function renderSummary() {
+      const listEl = document.getElementById('checkout-items-list');
+      const subtotalEl = document.getElementById('summary-subtotal');
+      const taxEl = document.getElementById('summary-tax');
+      const totalEl = document.getElementById('summary-total');
+
+      if (!listEl) return;
+
+      listEl.innerHTML = '';
+      let subtotal = 0;
+
+      cartData.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+        const div = document.createElement('div');
+        div.className = 'summary-item';
+        div.innerHTML = `
+          <div class="summary-item-info">
+            <span class="summary-item-name">${item.name}</span>
+            <span class="summary-item-qty">× ${item.quantity}</span>
+          </div>
+          <span class="summary-item-price">$${itemTotal.toFixed(2)}</span>
+        `;
+        listEl.appendChild(div);
+      });
+
+      const tax = subtotal * 0.08; // 8% tax
+      subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+      taxEl.textContent = `$${tax.toFixed(2)}`;
+      totalEl.textContent = `$${(subtotal + tax).toFixed(2)}`;
+    }
+
+    // Step Navigation
+    function goToPayment() {
+      const form = document.getElementById('shipping-form');
+      // Validate all required fields
+      const inputs = form.querySelectorAll('[required]');
+      let valid = true;
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          input.style.borderColor = '#dc3545';
+          valid = false;
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+
+      if (!valid) {
+        return;
+      }
+
+      // Hide details, show payment
+      document.getElementById('panel-details').classList.remove('active');
+      document.getElementById('panel-payment').classList.add('active');
+
+      // Update progress
+      document.getElementById('step-3').classList.add('active');
+      document.querySelectorAll('.step-line')[1].classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBackToDetails() {
+      document.getElementById('panel-payment').classList.remove('active');
+      document.getElementById('panel-details').classList.add('active');
+
+      document.getElementById('step-3').classList.remove('active');
+      document.querySelectorAll('.step-line')[1].classList.remove('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function placeOrder() {
+      const method = document.querySelector('input[name="payment-method"]:checked').value;
+
+      if (method === 'card') {
+        const cardName = document.getElementById('card-name').value.trim();
+        const cardNumber = document.getElementById('card-number').value.trim();
+        const cardExpiry = document.getElementById('card-expiry').value.trim();
+        const cardCvv = document.getElementById('card-cvv').value.trim();
+
+        if (!cardName || !cardNumber || !cardExpiry || !cardCvv) {
+          if (!cardName) document.getElementById('card-name').style.borderColor = '#dc3545';
+          if (!cardNumber) document.getElementById('card-number').style.borderColor = '#dc3545';
+          if (!cardExpiry) document.getElementById('card-expiry').style.borderColor = '#dc3545';
+          if (!cardCvv) document.getElementById('card-cvv').style.borderColor = '#dc3545';
+          return;
+        }
+      }
+
+      // Generate order ID
+      const orderId = 'TC-' + Date.now().toString().slice(-6);
+      document.getElementById('generated-order-id').textContent = '#' + orderId;
+
+      // Set email
+      const emailInput = document.getElementById('checkout-email');
+      document.getElementById('confirm-email').textContent = emailInput ? emailInput.value : 'your email';
+
+      // Build confirmation items
+      const confirmItems = document.getElementById('confirm-items');
+      confirmItems.innerHTML = '';
+      cartData.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'confirm-item';
+        div.innerHTML = `<span>${item.name} × ${item.quantity}</span><span>$${(item.price * item.quantity).toFixed(2)}</span>`;
+        confirmItems.appendChild(div);
+      });
+
+      // Set total
+      const totalText = document.getElementById('summary-total').textContent;
+      document.getElementById('confirm-total-amount').textContent = totalText;
+
+      // Show confirmation
+      document.getElementById('panel-payment').classList.remove('active');
+      document.getElementById('panel-confirm').classList.add('active');
+
+      // Update progress
+      document.getElementById('step-4').classList.add('active');
+      document.querySelectorAll('.step-line')[2].classList.add('active');
+
+      // Hide sidebar
+      document.querySelector('.checkout-sidebar').style.display = 'none';
+
+      // Clear cart from localStorage
+      localStorage.removeItem('timelycraft_cart');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Payment method switcher
+    document.querySelectorAll('.payment-option').forEach(option => {
+      option.addEventListener('click', function () {
+        document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
+        this.classList.add('active');
+
+        const method = this.getAttribute('data-method');
+        document.querySelector('.card-form').style.display = method === 'card' ? 'block' : 'none';
+        document.getElementById('paypal-message').style.display = method === 'paypal' ? 'flex' : 'none';
+        document.getElementById('cod-message').style.display = method === 'cod' ? 'flex' : 'none';
+      });
+    });
+
+    // Card number formatting (add spaces every 4 digits)
+    const cardNumberInput = document.getElementById('card-number');
+    if (cardNumberInput) {
+      cardNumberInput.addEventListener('input', function (e) {
+        let value = this.value.replace(/\s+/g, '').replace(/[^0-9]/g, '');
+        let formatted = value.match(/.{1,4}/g);
+        this.value = formatted ? formatted.join('  ') : '';
+      });
+    }
+
+    // Expiry date formatting (MM / YY)
+    const expiryInput = document.getElementById('card-expiry');
+    if (expiryInput) {
+      expiryInput.addEventListener('input', function () {
+        let value = this.value.replace(/\D/g, '');
+        if (value.length >= 2) {
+          value = value.slice(0, 2) + ' / ' + value.slice(2, 4);
+        }
+        this.value = value;
+      });
+    }
+
+    // Reset border on focus
+    document.querySelectorAll('.checkout-form input, .checkout-form select').forEach(input => {
+      input.addEventListener('focus', function () {
+        this.style.borderColor = '';
+      });
+    });
+
+    // Initialize
+    loadCartData();
+  </script>
+</body>
+</html>

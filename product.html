@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details | TimelyCraft</title>
-    <link rel="stylesheet" href="CSS/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View detailed product information for premium TimelyCraft watches. Add to cart and shop luxury timepieces.">
+  <meta property="og:title" content="Product Details | TimelyCraft">
+  <meta property="og:description" content="Explore our elegant men's watch with leather strap and quartz movement.">
+  <title>Product Details | TimelyCraft</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="sticky-header">
-  <div class="container">
-    <a href="index.html" class="logo">TimelyCraft</a>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="collections.html">Collections</a></li>
-      <li><a href="product.html">View Products</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-icons">
-      <input type="text" placeholder="Search..." aria-label="Search">
-
-      <a href="wishlist.html" class="icon-link">
-        <i class="fa-solid fa-heart"></i>
-        <span>Wishlist</span>
-      </a>
-
-      <a href="cart.html" class="icon-link">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </a>
-    </div>
-  </div>
-</header>
-<main>
-  <section class="product-details">
-    <div class="product-images">
-      <img
-        src="https://img.freepik.com/free-photo/beautiful-rendering-steel-object_23-2151897654.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740"
-        alt="Elegant Men's Watch"
-      />
-    </div>
-    <div class="product-info">
-      <h1>Elegant Men's Watch</h1>
-      <p class="price">$99.99</p>
-      <p class="description">
-        This elegant men's watch features a sleek design with a leather strap and quartz movement.
-      </p>
-      <form class="add-to-cart-form">
-        <label for="quantity">Quantity:</label>
-        <input
-          type="number"
-          id="quantity"
-          name="quantity"
-          value="1"
-          min="1"
-          required
-        />
-        <button type="submit">Add to Cart</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.add-to-cart-form');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const productName = document.querySelector('.product-info h1').innerText;
-      const productPrice = document.querySelector('.price').innerText;
-      const quantity = document.getElementById('quantity').value;
-
-      alert(`Added to cart:\n${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}`);
-          });
-  });
-</script>
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
+  <header class="sticky-header">
+    <div class="container">
+      <a href="index.html" class="logo">TimelyCraft</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="product.html" class="active">View Products</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <a href="wishlist.html" class="icon-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </header>
+  <div class="nav-overlay"></div>
 
-    <div class="footer-newsletter">
-      <h4>Join Our Newsletter</h4>
-      <form>
-        <input type="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="discount-note">Get 10% off your first order</p>
+  <main>
+    <section class="product-details reveal">
+      <div class="product-images">
+        <img src="https://img.freepik.com/free-photo/beautiful-rendering-steel-object_23-2151897654.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Elegant Men's Watch">
+      </div>
+      <div class="product-info">
+        <h1>Elegant Men's Watch</h1>
+        <div class="star-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>(4.5 — 128 reviews)</span>
+        </div>
+        <p class="price">$99.99</p>
+        <p class="description">
+          This elegant men's watch features a sleek design with a premium leather strap, Swiss-inspired quartz movement, and sapphire crystal glass for unmatched durability and style.
+        </p>
+        <form class="add-to-cart-form">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs reveal">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="tab-description">Description</button>
+        <button class="tab-btn" data-tab="tab-specifications">Specifications</button>
+        <button class="tab-btn" data-tab="tab-reviews">Reviews</button>
+      </div>
+
+      <div id="tab-description" class="tab-content active">
+        <p>The Elegant Men's Watch is a masterpiece of modern horology. Crafted with meticulous attention to detail, it features a polished stainless steel case, a genuine Italian leather strap, and a precision quartz movement that ensures accuracy within ±15 seconds per month.</p>
+        <p>Whether you're heading to a boardroom or a social event, this watch makes a statement of refined taste and sophistication.</p>
+      </div>
+
+      <div id="tab-specifications" class="tab-content">
+        <ul>
+          <li><strong>Case Material:</strong> Stainless Steel</li>
+          <li><strong>Band Material:</strong> Italian Leather</li>
+          <li><strong>Movement:</strong> Quartz</li>
+          <li><strong>Dial Diameter:</strong> 42mm</li>
+          <li><strong>Water Resistance:</strong> 50m</li>
+          <li><strong>Crystal:</strong> Sapphire</li>
+          <li><strong>Warranty:</strong> 2 Years International</li>
+        </ul>
+      </div>
+
+      <div id="tab-reviews" class="tab-content">
+        <p><strong>★★★★★</strong> — "Absolutely stunning watch. Worth every penny." — <em>James D.</em></p>
+        <p><strong>★★★★☆</strong> — "Great quality leather strap and the dial is gorgeous." — <em>Maria S.</em></p>
+        <p><strong>★★★★★</strong> — "Received it in 3 days. Perfect fit and elegant design." — <em>Alex P.</em></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.add-to-cart-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const productName = document.querySelector('.product-info h1').innerText;
+          const productPrice = document.querySelector('.price').innerText;
+          const quantity = document.getElementById('quantity').value;
+          alert(`Added to cart:\n${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}`);
+        });
+      }
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <form><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>
+        <p class="discount-note">Get 10% off your first order</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="footer-bottom">
+      <p><strong>We Accept</strong></p>
+      <div id="paymentMethods"></div>
+      <p class="footer-copyright">&copy; 2025 TimelyCraft. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p><strong>We Accept</strong></p>
-    <div id="paymentMethods"></div>
-  </div>
-</footer>
-
-    <script src="JS/script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="JS/script.js"></script>
 </body>
 </html>
