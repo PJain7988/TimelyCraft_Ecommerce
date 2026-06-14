@@ -183,67 +183,92 @@ document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.getElementById('bestSellersCarousel');
 
   window.productsData = [
-    // Mens
-    { id: 'classic-mens-watch', category: 'mens', name: "Classic Men's Watch", image: ['https://img.freepik.com/free-photo/rehearsal-preparation-groom-s-watch-hand_8353-5810.jpg?w=996'], price: '$99.99', oldPrice: '', badge: 'New', description: "A timeless masterpiece featuring a stainless steel case, genuine leather strap, and precision quartz movement." },
-    { id: 'bold-chronograph', category: 'mens', name: "Bold Chronograph", image: ['https://img.freepik.com/free-photo/elegant-watch-with-silver-golden-chain-isolated_181624-27080.jpg?w=740'], price: '$149.99', oldPrice: '', badge: '', description: "For the active man. Features stopwatch functionality and a rugged metal band." },
-    { id: 'minimalist-mens', category: 'mens', name: "Minimalist Leather", image: ['https://img.freepik.com/premium-photo/isolate-woman-wristwatch_63097-2001.jpg?w=740'], price: '$79.99', oldPrice: '$120.00', badge: 'Sale', description: "Sleek and simple dial with a comfortable leather strap for everyday wear." },
-    // Womens
-    { id: 'elegant-womens-watch', category: 'womens', name: "Elegant Women's Watch", image: ['https://img.freepik.com/free-photo/close-up-seller-s-hand-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20420.jpg?w=996'], price: '$199.99', oldPrice: '', badge: '', description: "A delicate and refined timepiece designed for the modern woman with a mother-of-pearl dial." },
-    { id: 'rose-gold-mesh', category: 'womens', name: "Rose Gold Mesh", image: ['https://img.freepik.com/premium-photo/girl-jacket-with-clock-wrist-watch-her-hand_722501-185.jpg?w=740'], price: '$129.99', oldPrice: '', badge: 'Popular', description: "Stunning rose gold watch with an adjustable mesh bracelet." },
-    // Smart
-    { id: 'smartwatch-pro', category: 'smart', name: 'SmartWatch Pro', image: ['https://img.freepik.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg?w=740'], price: '$299.99', oldPrice: '$349.99', badge: 'Sale', description: "The ultimate companion for your active lifestyle. Tracks heart rate, sleep, and workouts." },
-    { id: 'fitness-tracker-elite', category: 'smart', name: 'Fitness Tracker Elite', image: ['https://img.freepik.com/free-vector/realistic-fitness-trackers_23-2148530530.jpg?w=740'], price: '$149.99', oldPrice: '', badge: '', description: "Lightweight and waterproof fitness tracker with GPS." },
-    // Luxury
-    { id: 'luxury-watch', category: 'luxury', name: 'Luxury Diamond Edition', image: ['https://img.freepik.com/premium-photo/close-up-illuminated-clock_1048944-30735414.jpg?w=740'], price: '$899.99', oldPrice: '', badge: 'Limited', description: "Exude confidence with this premium luxury watch boasting automatic mechanical movement." },
-    { id: 'fashionable-watch', category: 'fashion', name: 'Fashionable Watch', image: ['https://img.freepik.com/free-photo/close-up-woman-listening-music_23-2148574823.jpg?w=740'], price: '$399.99', oldPrice: '', badge: '', description: "A trendy, minimalist watch that pairs perfectly with any outfit." },
+    {
+      id: 'classic-mens-watch',
+      name: "Classic Men's Watch",
+      image: [
+        'https://img.freepik.com/premium-photo/gorgeous-luxury-wrist-watch-background_1262174-662.jpg?w=740',
+        'https://img.freepik.com/free-photo/rehearsal-preparation-groom-s-watch-hand_8353-5810.jpg?w=996',
+        'https://img.freepik.com/free-photo/watch-black-box-bow-tie-lie-white-windowsill_8353-687.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$99.99',
+      description: "A timeless masterpiece featuring a stainless steel case, genuine leather strap, and precision quartz movement. Perfect for both casual and formal wear."
+    },
+    {
+      id: 'elegant-womens-watch',
+      name: "Elegant Women's Watch",
+      image: [
+        'https://img.freepik.com/free-photo/close-up-seller-s-hand-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20420.jpg?w=996',
+        'https://img.freepik.com/premium-photo/isolate-woman-wristwatch_63097-2001.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/premium-photo/girl-jacket-with-clock-wrist-watch-her-hand_722501-185.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$199.99',
+      description: "A delicate and refined timepiece designed for the modern woman. Features a rose-gold plated bezel, mother-of-pearl dial, and a slender mesh bracelet."
+    },
+    {
+      id: 'smartwatch-pro',
+      name: 'SmartWatch Pro',
+      image: [
+        'https://img.freepik.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-vector/realistic-fitness-trackers_23-2148530530.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-vector/realistic-fitness-tracker-bracelet-illustration-collection_23-2148555261.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$299.99',
+      description: "The ultimate companion for your active lifestyle. Tracks heart rate, sleep, and workouts with a vibrant OLED display and 7-day battery life."
+    },
+    {
+      id: 'luxury-watch',
+      name: 'Luxury Watch',
+      image: [
+        'https://img.freepik.com/free-photo/elegant-watch-with-silver-golden-chain-isolated_181624-27080.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-photo/close-up-seller-s-hands-gloves-shows-exclusive-men-s-watch-from-new-collection-luxury-jewelry-store_613910-20850.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/premium-photo/close-up-illuminated-clock_1048944-30735414.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$499.99',
+      description: "Exude confidence with this premium luxury watch. It boasts an automatic mechanical movement, sapphire crystal glass, and 100m water resistance."
+    },
+    {
+      id: 'fashionable-watch',
+      name: 'Fashionable Watch',
+      image: [
+        'https://img.freepik.com/free-photo/close-up-woman-listening-music_23-2148574823.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/premium-photo/stylish-man-gray-jumper-elegant-business-man-s-hand-with-fas_723234-2578.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740',
+        'https://img.freepik.com/free-vector/realistic-watches-set_1284-11684.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$399.99',
+      description: "A trendy, minimalist watch that pairs perfectly with any outfit. Features an ultra-thin dial profile and interchangeable straps for maximum versatility."
+    },
+    {
+      id: 'mens-diver-watch',
+      name: "Men's Diver Pro",
+      image: [
+        'https://img.freepik.com/free-photo/macro-shot-silver-watch_23-2150393046.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$549.99',
+      description: "A rugged, high-performance diver's watch built for the extremes. Features a unidirectional rotating bezel, luminous hands, and 200m water resistance."
+    },
+    {
+      id: 'womens-diamond-watch',
+      name: "Women's Diamond Edition",
+      image: [
+        'https://img.freepik.com/premium-photo/beautiful-watch-with-diamond-it-is-lying-wooden-table_960396-85750.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$899.99',
+      description: "An exquisite statement piece. This limited edition watch features real diamond hour markers, a rose gold case, and a stunning mother-of-pearl dial."
+    },
+    {
+      id: 'rugged-smartwatch',
+      name: 'Rugged Smartwatch',
+      image: [
+        'https://img.freepik.com/free-photo/smart-watch-with-digital-screen-wooden-table-with-blurred-background_1142-37841.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740'
+      ],
+      price: '$249.99',
+      description: "Built for the great outdoors. This smartwatch offers GPS tracking, altimeter, barometer, and a durable shock-proof casing."
+    }
   ];
 
-  // Dynamic Shop Rendering
-  const shopGrid = document.querySelector('.products-flex');
-  // Check if we're on shop page and need to dynamically inject products
-  if (shopGrid && window.location.pathname.includes('shop.html')) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoryFilter = urlParams.get('cat');
-    
-    // Clear static HTML
-    shopGrid.innerHTML = '';
-    
-    // Filter logic
-    const productsToShow = categoryFilter 
-      ? window.productsData.filter(p => p.category === categoryFilter)
-      : window.productsData;
-
-    if (productsToShow.length === 0) {
-      shopGrid.innerHTML = '<p style="color:var(--text-muted); grid-column: 1/-1; text-align:center;">No products found in this category.</p>';
-    }
-
-    productsToShow.forEach(product => {
-      const badgeHtml = product.badge ? `<span class="product-badge ${product.badge.toLowerCase()}">${product.badge}</span>` : '';
-      const oldPriceHtml = product.oldPrice ? `<span class="old-price">${product.oldPrice}</span>` : '';
-
-      shopGrid.innerHTML += `
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img src="${product.image[0]}" alt="${product.name}">
-            <div class="product-actions">
-              <button class="action-btn" aria-label="Add to Wishlist" onclick="alert('Added to Wishlist')"><i class="far fa-heart"></i></button>
-              <a href="product.html?id=${product.id}" class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></a>
-              <button class="action-btn" aria-label="Add to Cart" onclick="alert('Added to Cart')"><i class="fas fa-cart-plus"></i></button>
-            </div>
-            ${badgeHtml}
-          </div>
-          <div class="product-info">
-            <h3>${product.name}</h3>
-            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-            <p class="price">${oldPriceHtml} ${product.price}</p>
-          </div>
-        </div>
-      `;
-    });
-  }
-
   if (carousel) {
-    window.productsData.slice(0, 5).forEach((product) => {
+    bestSellers.forEach((product) => {
       const item = document.createElement('div');
       item.classList.add('carousel-item', 'product-card'); // Use product-card styles
 
@@ -333,24 +358,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 10. DYNAMIC PRODUCT PAGE
+  // 10. DYNAMIC PRODUCT PAGE LOGIC
   // ==========================================
   if (window.location.pathname.includes('product.html')) {
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
-
-    if (productId) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    
+    if (productId && window.productsData) {
       const product = window.productsData.find(p => p.id === productId);
+      
       if (product) {
+        // Update DOM elements
         const titleEl = document.getElementById('product-title');
         const priceEl = document.getElementById('product-price');
         const descEl = document.getElementById('product-short-desc');
         const imgEl = document.getElementById('product-image');
-
+        
         if (titleEl) titleEl.textContent = product.name;
         if (priceEl) priceEl.textContent = product.price;
         if (descEl) descEl.textContent = product.description;
-        if (imgEl) imgEl.src = product.image[0];
+        if (imgEl && product.image.length > 0) {
+          imgEl.src = product.image[0];
+          imgEl.alt = product.name;
+        }
+        
+        // Update page title
+        document.title = `${product.name} | TimelyCraft`;
       }
     }
   }
