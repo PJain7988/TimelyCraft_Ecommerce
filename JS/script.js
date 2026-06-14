@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'elegant-womens-watch',
       name: "Elegant Women's Watch",
       image: [
-        'https://in.pinterest.com/pin/977351556646223053/'
+        'https://images.unsplash.com/photo-1616804616235-cb233dce8e00?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$199.99',
       description: "A delicate and refined timepiece designed for the modern woman. Features a rose-gold plated bezel, mother-of-pearl dial, and a slender mesh bracelet."
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fashionable-watch',
       name: 'Fashionable Watch',
       image: [
-        'https://in.pinterest.com/pin/741194051218575998/'
+        'https://images.unsplash.com/photo-1508656961664-92931a2c3a50?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$399.99',
       description: "A trendy, minimalist watch that pairs perfectly with any outfit. Features an ultra-thin dial profile and interchangeable straps for maximum versatility."
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'womens-diamond-watch',
       name: "Women's Diamond Edition",
       image: [
-        'https://in.pinterest.com/pin/1148488342508721879/'
+        'https://img.freepik.com/premium-photo/beautiful-watch-with-diamond-it-is-lying-wooden-table_960396-85750.jpg'
       ],
       price: '$899.99',
       description: "An exquisite statement piece. This limited edition watch features real diamond hour markers, a rose gold case, and a stunning mother-of-pearl dial."
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'rugged-smartwatch',
       name: 'Rugged Smartwatch',
       image: [
-        'https://in.pinterest.com/pin/1078260335838203375/'
+        'https://images.unsplash.com/photo-1508057198894-247b23fe5278?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$249.99',
       description: "Built for the great outdoors. This smartwatch offers GPS tracking, altimeter, barometer, and a durable shock-proof casing."
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'minimalist-black-watch',
       name: 'Minimalist Black Watch',
       image: [
-        'https://images.unsplash.com/photo-1508656961664-https://in.pinterest.com/pin/436919601366661163/92931a2c3a50?q=80&w=1000&auto=format&fit=crop'
+        'https://images.unsplash.com/photo-1508656961664-92931a2c3a50?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$129.99',
       description: "Sleek, stealthy, and sophisticated. A minimalist all-black design perfect for modern urban wear."
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fitness-tracker-watch',
       name: 'Fitness Tracker Watch',
       image: [
-        'https://in.pinterest.com/pin/179369997655955953/'
+        'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b0?q=80&w=1000&auto=format&fit=crop'
       ],
       price: '$89.99',
       description: "Keep track of your health goals with this vibrant green fitness tracker featuring continuous heart-rate monitoring."
