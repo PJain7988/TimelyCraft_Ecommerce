@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   if (carousel) {
-    bestSellers.forEach((product) => {
+    window.productsData.forEach((product) => {
       const item = document.createElement('div');
       item.classList.add('carousel-item', 'product-card'); // Use product-card styles
 
