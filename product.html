@@ -7,7 +7,7 @@
   <meta property="og:title" content="Product Details | TimelyCraft">
   <meta property="og:description" content="Explore our elegant men's watch with leather strap and quartz movement.">
   <title>Product Details | TimelyCraft</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,10 +40,10 @@
   <main>
     <section class="product-details reveal">
       <div class="product-images">
-        <img src="https://img.freepik.com/free-photo/beautiful-rendering-steel-object_23-2151897654.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Elegant Men's Watch">
+        <img id="product-image" src="https://img.freepik.com/free-photo/beautiful-rendering-steel-object_23-2151897654.jpg?ga=GA1.1.958911878.1730032087&semt=ais_hybrid&w=740" alt="Elegant Men's Watch">
       </div>
       <div class="product-info">
-        <h1>Elegant Men's Watch</h1>
+        <h1 id="product-title">Elegant Men's Watch</h1>
         <div class="star-rating">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -52,11 +52,11 @@
           <i class="fas fa-star-half-alt"></i>
           <span>(4.5 — 128 reviews)</span>
         </div>
-        <p class="price">$99.99</p>
-        <p class="description">
+        <p class="price" id="product-price">$99.99</p>
+        <p class="description" id="product-short-desc">
           This elegant men's watch features a sleek design with a premium leather strap, Swiss-inspired quartz movement, and sapphire crystal glass for unmatched durability and style.
         </p>
-        <form class="add-to-cart-form">
+        <form class="add-to-cart-form" onsubmit="event.preventDefault(); alert('Added to Cart');">
           <label for="quantity">Quantity:</label>
           <input type="number" id="quantity" name="quantity" value="1" min="1" required>
           <button type="submit">Add to Cart</button>
