@@ -97,21 +97,6 @@
     </section>
   </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.querySelector('.add-to-cart-form');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const productName = document.querySelector('.product-info h1').innerText;
-          const productPrice = document.querySelector('.price').innerText;
-          const quantity = document.getElementById('quantity').value;
-          alert(`Added to cart:\n${productName}\nQuantity: ${quantity}\nPrice: ${productPrice}`);
-        });
-      }
-    });
-  </script>
-
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-links">
@@ -142,6 +127,6 @@
   </footer>
 
   <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
-  <script src="JS/script.js"></script>
+  <script src="JS/script.js?v=3"></script>
 </body>
 </html>

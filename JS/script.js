@@ -336,7 +336,12 @@ document.addEventListener('DOMContentLoaded', () => {
       info.classList.add('product-info');
       
       const title = document.createElement('h3');
-      title.textContent = product.name;
+      const titleLink = document.createElement('a');
+      titleLink.href = `product.html?id=${product.id}`;
+      titleLink.textContent = product.name;
+      titleLink.style.color = 'inherit';
+      titleLink.style.textDecoration = 'none';
+      title.appendChild(titleLink);
       
       const stars = document.createElement('div');
       stars.classList.add('star-rating');
@@ -360,55 +365,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 10. DYNAMIC PRODUCT PAGE LOGIC
   // ==========================================
-  
-  // Intercept Quick View clicks to store product data dynamically
-  document.addEventListener('click', function(e) {
-    const quickViewBtn = e.target.closest('a[href*="product.html"]');
-    if (quickViewBtn) {
-      const card = quickViewBtn.closest('.product-card') || quickViewBtn.closest('.carousel-item') || quickViewBtn.closest('.wishlist-card');
-      
-      if (card) {
-        const titleEl = card.querySelector('h3');
-        const priceEl = card.querySelector('.price');
-        const imgEl = card.querySelector('img');
-        
-        const productData = {
-          name: titleEl ? titleEl.textContent.trim() : 'Elegant Men\'s Watch',
-          price: priceEl ? priceEl.textContent.trim() : '$99.99',
-          image: imgEl ? imgEl.src : '',
-          description: "An elegant and premium timepiece designed for those who appreciate fine craftsmanship. Features premium materials and reliable movement for everyday excellence."
-        };
-        
-        localStorage.setItem('quickViewProduct', JSON.stringify(productData));
-      }
-    }
-  });
-
-  // Populate product.html using the saved data
-  if (window.location.pathname.includes('product.html')) {
-    const savedProduct = localStorage.getItem('quickViewProduct');
+  if (window.location.pathname.toLowerCase().includes('product.html')) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
     
-    if (savedProduct) {
-      try {
-        const product = JSON.parse(savedProduct);
-        
-        const titleEl = document.getElementById('product-title');
-        const priceEl = document.getElementById('product-price');
-        const descEl = document.getElementById('product-short-desc');
-        const imgEl = document.getElementById('product-image');
-        
-        if (titleEl && product.name) titleEl.textContent = product.name;
-        if (priceEl && product.price) priceEl.textContent = product.price;
-        if (descEl && product.description) descEl.textContent = product.description;
-        if (imgEl && product.image) {
-          imgEl.src = product.image;
-          imgEl.alt = product.name;
-        }
-        
-        if (product.name) document.title = `${product.name} | TimelyCraft`;
-      } catch (e) {
-        console.error("Error parsing product data", e);
+    if (window.productsData && window.productsData.length > 0) {
+      // Find product by ID or default to the first product if not found
+      let product = window.productsData.find(p => p.id === productId);
+      if (!product) {
+        product = window.productsData[0];
       }
+      
+      // Update DOM elements
+      const titleEl = document.getElementById('product-title');
+      const priceEl = document.getElementById('product-price');
+      const descEl = document.getElementById('product-short-desc');
+      const imgEl = document.getElementById('product-image');
+      
+      if (titleEl) titleEl.textContent = product.name;
+      if (priceEl) priceEl.textContent = product.price;
+      if (descEl) descEl.textContent = product.description;
+      if (imgEl && product.image.length > 0) {
+        imgEl.src = product.image[0];
+        imgEl.alt = product.name;
+      }
+      
+      // Update page title
+      document.title = `${product.name} | TimelyCraft`;
     }
   }
 
